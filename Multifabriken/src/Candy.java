@@ -39,6 +39,6 @@ public class Candy {
 
 	//printmetod Candy.printInfo(candy)
 	public static void printInfo(Candy candy){
-		System.out.println("Produkt: " + candy.getProdukt() + "\nTaste: " + candy.getTaste() + "\nQuantity: " + candy.getQuantity());
+		System.out.println("\nProdukt: " + candy.getProdukt() + "\nTaste: " + candy.getTaste() + "\nQuantity: " + candy.getQuantity() + " pcs");
 	}
 }
