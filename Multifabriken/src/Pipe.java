@@ -1,9 +1,9 @@
 public class Pipe {
 
 	//Variabler Diameter,Length
-	String produkt = "Pipe";
-	int diameter;//eventuellt låsa till några val
-	int length;
+	private String produkt = "Pipe";
+	private int diameter;//eventuellt låsa till några val
+	private int length;
 
 	//Konstruktor
 	Pipe(int diameter,int length){
