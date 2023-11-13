@@ -32,6 +32,4 @@ public class Candy {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	
-	//En lista Candys
 }

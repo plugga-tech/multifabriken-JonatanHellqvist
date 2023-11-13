@@ -34,5 +34,4 @@ public class Oatmilk {
 	public void setLiter(int liter) {
 		this.liter = liter;
 	}
-	//En lista Oatmilks
 }

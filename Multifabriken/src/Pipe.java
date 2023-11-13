@@ -30,7 +30,4 @@ public class Pipe {
 	public void setLength(int length) {
 		this.length = length;
 	}
-	
-	//En lista Pipes
-	
 }
