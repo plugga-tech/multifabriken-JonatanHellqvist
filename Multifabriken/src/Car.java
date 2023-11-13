@@ -4,7 +4,7 @@ import java.util.List;
 public class Car {
 	
 	public static List<Car> carList = new ArrayList<>();
-	
+
 	//Variabler Regnumber,Color,Brand
 	private String produkt = "Car";
 	private String regNumber; //lås till 6 siffror?
@@ -52,6 +52,7 @@ public class Car {
 		this.brand = brand;
 	}
 
+	//printmetod Car.printInfo(car)
 	public static void printInfo(Car car){
 		System.out.println("Produkt: " + car.getProdukt() + "\nBrand: " + car.getBrand() + "\nColor: " + car.getColor() + "\nRegnr: " + car.getRegNumber());
 	}

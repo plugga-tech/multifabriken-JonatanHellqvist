@@ -6,11 +6,11 @@ public class Pipe {
 	public static List<Pipe> pipeList = new ArrayList<>();
 	//Variabler Diameter,Length
 	private String produkt = "Pipe";
-	private int diameter;//eventuellt låsa till några val
-	private int length;
+	private double diameter;//eventuellt låsa till några val
+	private double length;
 
 	//Konstruktor
-	Pipe(int diameter,int length){
+	Pipe(double diameter,double length){
 		this.diameter = diameter;
 		this.length = length;
 	}
@@ -22,13 +22,13 @@ public class Pipe {
 	public void setProdukt(String produkt) {
 		this.produkt = produkt;
 	}
-	public int getDiameter() {
+	public double getDiameter() {
 		return diameter;
 	}
 	public void setDiameter(int diameter) {
 		this.diameter = diameter;
 	}
-	public int getLength() {
+	public double getLength() {
 		return length;
 	}
 	public void setLength(int length) {
