@@ -1,5 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pipe {
 
+	public static List<Pipe> pipeList = new ArrayList<>();
 	//Variabler Diameter,Length
 	private String produkt = "Pipe";
 	private int diameter;//eventuellt låsa till några val
@@ -29,5 +33,10 @@ public class Pipe {
 	}
 	public void setLength(int length) {
 		this.length = length;
+	}
+
+	//printmetod Pipe.printInfo(pipe)
+	public static void printInfo(Pipe pipe){
+		System.out.println("Produkt: " + pipe.getProdukt() + "\nDiameter: " + pipe.getDiameter() + "\nLength: " + pipe.getLength());
 	}
 }

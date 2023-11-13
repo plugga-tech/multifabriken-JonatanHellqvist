@@ -2,16 +2,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Orders {
+	
+	// public static List<Car> carList = new ArrayList<>();
+    // public static List<Oatmilk> oatmilkList = new ArrayList<>();
+    // public static List<Candy> candyList = new ArrayList<>();
+    // public static List<Pipe> pipeList = new ArrayList<>();
+
 	// En lista Ordered med allt som man har beställt
-	public static List<Car>carList = new ArrayList<>();
-    public static List<Oatmilk>oatmilkList = new ArrayList<>();
-    public static List<Candy>candyList = new ArrayList<>();
-    public static List<Pipe>pipeList = new ArrayList<>();
-    public static List <String>orderedList = new ArrayList<>();
+    public static List <String> orderedList = new ArrayList<>();
     
-    
-        
-        //Pipe
+		//Pipe
         Pipe pipe1 = new Pipe(25, 6100);
         Pipe pipe2 = new Pipe(35, 3200);
         Pipe pipe3 = new Pipe (15,2500);

@@ -1,10 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
 	
+	public static List<Car> carList = new ArrayList<>();
+	
 	//Variabler Regnumber,Color,Brand
-	String produkt = "Car";
-	String regNumber; //lås till 6 siffror?
-	String color;
-	String brand;
+	private String produkt = "Car";
+	private String regNumber; //lås till 6 siffror?
+	private String color;
+	private String brand;
 
 	//Constructor
 	Car(String regNumber,String color,String brand){
@@ -45,6 +50,10 @@ public class Car {
 
 	public void setBrand(String brand) {
 		this.brand = brand;
+	}
+
+	public static void printInfo(Car car){
+		System.out.println("Produkt: " + car.getProdukt() + "\nBrand: " + car.getBrand() + "\nColor: " + car.getColor() + "\nRegnr: " + car.getRegNumber());
 	}
 }
 	

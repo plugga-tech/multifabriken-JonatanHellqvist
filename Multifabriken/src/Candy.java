@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Candy {
 
+	public static List<Candy> candyList = new ArrayList<>();
 	//Variabler Taste,Number
-	String produkt = "Candy";
-	String taste;//eventuellt låsa till några val?
-	int quantity;
+	private String produkt = "Candy";
+	private String taste;//eventuellt låsa till några val?
+	private int quantity;
 
 	//Constructor
 	Candy(String taste,int quantity) {
@@ -31,5 +35,10 @@ public class Candy {
 	}
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
+	}
+
+	//printmetod Candy.printInfo(candy)
+	public static void printInfo(Candy candy){
+		System.out.println("Produkt: " + candy.getProdukt() + "\nTaste: " + candy.getTaste() + "\nQuantity: " + candy.getQuantity());
 	}
 }
