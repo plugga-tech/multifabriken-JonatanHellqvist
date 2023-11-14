@@ -25,26 +25,25 @@ public class App {
     String [] candyTastes = {"Sour","Sweet","Salty","Chocolate","Mint","Fruity"};
     String [] oatmilkFatPercents = {"1.5%", "2.5%","3.5%","5%", "10%","15%"};
 
-        
-      
-
+    System.out.println("\nWelcome to the Multifactory");
         while(run) {
-
-            Menu.printIndexMenu();
+            Menu.printMenu(Menu.indexMenuList);
+            //Menu.printIndexMenu();
             menuChoice = Menu.checkInt(input);
            
             switch(menuChoice) {
                     
                 case 1:
-                    Menu.printCarMenu();
+                    Menu.printMenu(Menu.carMenuList);
+                    //Menu.printCarMenu();
                     menuChoice = Menu.checkInt(input);
 
                         carBrand =  Menu.printSwitch(menuChoice, carBrands); 
                             if (carBrand.equals("backOrError")) {
                                 continue;
                             }
-
-                    Menu.printCarColorMenu(); 
+                    Menu.printMenu(Menu.carColorMenuList);
+                    //Menu.printCarColorMenu(); 
                     menuChoice = Menu.checkInt(input);
                               
                         carColor = Menu.printSwitch(menuChoice, carColors);
@@ -60,7 +59,8 @@ public class App {
                 break;
 
                 case 2:
-                    Menu.printCandyMenu();
+                    Menu.printMenu(Menu.candyMenuList);
+                    //Menu.printCandyMenu();
                     menuChoice = Menu.checkInt(input);
                       
                         candyTaste = Menu.printSwitch(menuChoice, candyTastes);
@@ -93,7 +93,8 @@ public class App {
                 break;
 
                 case 4:
-                    Menu.printOatmilkMenu();
+                    Menu.printMenu(Menu.oatmilkMenuList);
+                    //Menu.printOatmilkMenu();
                     menuChoice = Menu.checkInt(input);
                     
                         oatmilkFatPercent = Menu.printSwitch(menuChoice, oatmilkFatPercents);
