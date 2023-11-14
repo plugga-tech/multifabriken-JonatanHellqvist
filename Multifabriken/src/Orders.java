@@ -18,7 +18,7 @@ public class Orders {
 		System.out.println("\n~~ Ordered Pipe ~~");
 	}
 
-	public static void orderOatmilk(double fatpercent,int liter) {
+	public static void orderOatmilk(String fatpercent,int liter) {
 		Oatmilk oatmilk = new Oatmilk(fatpercent,liter);
 		Oatmilk.oatmilkList.add(oatmilk);
 		System.out.println("\n~~ Ordered Candy ~~");

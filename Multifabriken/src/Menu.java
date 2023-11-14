@@ -44,7 +44,8 @@ public class Menu {
             "\n3: Fiat Uno" +
             "\n4: Passat" +
             "\n5: Monstertruck" + 
-            "\n6: Back");
+			"\n6: Stridsvagn M40" +
+            "\n7: Back");
 	}
 
 	public static void printCarColorMenu() {
@@ -67,7 +68,8 @@ public class Menu {
             "\n3: Salty" +
             "\n4: Chocolate" +
             "\n5: Mint" + 
-            "\n6: Back");
+            "\n6: Fruity" +
+			"\n7: Back");
 	}
 	
 	public static void printOatmilkMenu() {
@@ -75,8 +77,29 @@ public class Menu {
 			"\nEnter the fat percent you want to order:" + 
 			"\n1: 1.5%" +
 			"\n2: 2.5%" +
-			"\n3: 5%" +
-			"\n4: 10%" +
-			"\n5: Back");
+			"\n3: 3.5%" +
+			"\n4: 5%" +
+			"\n5: 10%" +
+			"\n6: 15%" +
+			"\n7: Back");
 	}
+
+
+//******SWITCH*******
+
+public static String printSwitch(int menuChoice,String [] caseOptions) {
+	String selectedCase = "";
+	switch (menuChoice) {
+		case 1: selectedCase = caseOptions[0]; break;
+		case 2: selectedCase = caseOptions[1]; break;
+		case 3: selectedCase = caseOptions[2]; break;
+		case 4: selectedCase = caseOptions[3]; break;
+		case 5: selectedCase = caseOptions[4]; break;
+		case 6: selectedCase = caseOptions[5]; break;
+		case 7: System.out.println("\nBack"); return "backOrError";
+		default: System.out.println("\nWrong input, Try again!"); return "backOrError";		
+	}
+	return selectedCase;
+}
+
 }

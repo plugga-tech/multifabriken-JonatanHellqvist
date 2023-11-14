@@ -7,20 +7,20 @@ public class Oatmilk {
 
 	//Variabler Fatpercent,Liter
 	private String produkt = "Oatmilk";
-	private double fatpercent;//eventuellt låsa till några val?
+	private String fatpercent;//eventuellt låsa till några val?
 	private int liter;
 
 	//Constructor
-	Oatmilk(double fatpercent, int liter) {
+	Oatmilk(String fatpercent, int liter) {
 		this.fatpercent = fatpercent;
 		this.liter = liter;
 	}
 	//getters och setters
-	public double getFatpercent() {
+	public String getFatpercent() {
 		return fatpercent;
 	}
 
-	public void setFatpercent(int fatpercent) {
+	public void setFatpercent(String fatpercent) {
 		this.fatpercent = fatpercent;
 	}
 
@@ -44,7 +44,7 @@ public class Oatmilk {
 	public static void printInfo(Oatmilk oatmilk){
 		System.out.println(
 			"\nProdukt: " + oatmilk.getProdukt() + 
-			"\nFatpercent: " + oatmilk.getFatpercent() + "%" + 
+			"\nFatpercent: " + oatmilk.getFatpercent() + 
 			"\nLiters: " + oatmilk.getLiter() + " l");
 	}
 }
