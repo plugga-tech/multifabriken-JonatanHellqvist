@@ -37,6 +37,9 @@ public class Pipe {
 
 	//printmetod Pipe.printInfo(pipe)
 	public static void printInfo(Pipe pipe){
-		System.out.println("\nProdukt: " + pipe.getProdukt() + "\nDiameter: " + pipe.getDiameter() + " mm" + "\nLength: " + pipe.getLength() + " mm");
+		System.out.println(
+			"\nProdukt: " + pipe.getProdukt() + 
+			"\nDiameter: " + pipe.getDiameter() + " mm" + 
+			"\nLength: " + pipe.getLength() + " mm");
 	}
 }

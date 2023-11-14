@@ -54,7 +54,11 @@ public class Car {
 
 	//printmetod Car.printInfo(car)
 	public static void printInfo(Car car){
-		System.out.println("\nProdukt: " + car.getProdukt() + "\nBrand: " + car.getBrand() + "\nColor: " + car.getColor() + "\nRegnr: " + car.getRegNumber());
+		System.out.println(
+			"\nProdukt: " + car.getProdukt() + 
+			"\nBrand: " + car.getBrand() + 
+			"\nColor: " + car.getColor() + 
+			"\nRegnr: " + car.getRegNumber());
 	}
 }
 	

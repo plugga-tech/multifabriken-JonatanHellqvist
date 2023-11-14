@@ -43,7 +43,19 @@ public class Menu {
             "\n3: Fiat Uno" +
             "\n4: Passat" +
             "\n5: Monstertruck" + 
-            "\n6: Exit");
+            "\n6: Back");
+	}
+
+	public static void printCarColorMenu() {
+		System.out.println(
+			"\nSelect the Color you want" + 
+            "\n1: White" +
+            "\n2: Black" +
+            "\n3: Red" +
+            "\n4: Yellow" +
+            "\n5: Blue" + 
+			"\n6: Rust" +
+            "\n7: Back");
 	}
 
 	public static void printCandyMenu() {
@@ -54,7 +66,7 @@ public class Menu {
             "\n3: Salty" +
             "\n4: Chocolate" +
             "\n5: Mint" + 
-            "\n6: Exit");
+            "\n6: Back");
 	}
 	
 	public static void printOatmilkMenu() {
@@ -64,6 +76,6 @@ public class Menu {
 			"\n2: 2.5%" +
 			"\n3: 5%" +
 			"\n4: 10%" +
-			"\n5: Exit");
+			"\n5: Back");
 	}
 }

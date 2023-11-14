@@ -42,6 +42,9 @@ public class Oatmilk {
 
 	//printmetod Oatmilk.printInfo(oatmilk)
 	public static void printInfo(Oatmilk oatmilk){
-		System.out.println("\nProdukt: " + oatmilk.getProdukt() + "\nFatpercent: " + oatmilk.getFatpercent() + "%" + "\nLiters: " + oatmilk.getLiter() + " l");
+		System.out.println(
+			"\nProdukt: " + oatmilk.getProdukt() + 
+			"\nFatpercent: " + oatmilk.getFatpercent() + "%" + 
+			"\nLiters: " + oatmilk.getLiter() + " l");
 	}
 }
