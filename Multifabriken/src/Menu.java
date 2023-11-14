@@ -3,13 +3,14 @@ import java.util.Scanner;
 public class Menu {
 	//**********Meny metoder*********/
 
+	
 	public static int checkInt(Scanner input) {	
 		int intToCheck;
 		if(input.hasNextInt()) {
 			intToCheck = input.nextInt();
 		} else {
 			input.next();
-			intToCheck = -1;
+			intToCheck = -1; //minusvärde för att forcera fram ett default resultat i switchen och ge ett felmeddelande
 		}	
 		return intToCheck;
 	}
@@ -20,7 +21,7 @@ public class Menu {
 			doubleToCheck = input.nextDouble();
 		} else {
 			input.next();
-			doubleToCheck = -1;
+			doubleToCheck = -1; //minusvärde för att forcera fram ett default resultat i switchen och ge ett felmeddelande
 		}	
 		return doubleToCheck;
 	}

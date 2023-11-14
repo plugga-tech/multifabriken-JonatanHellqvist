@@ -9,23 +9,24 @@ public class Orders {
 	public static void orderCandy(String taste,int quantity) {
 		Candy candy = new Candy(taste,quantity);
 		Candy.candyList.add(candy);
-		System.out.println("\n~~ Ordered Candy~~");
+		System.out.println("\n~~ Ordered Candy ~~");
 	}
 
 	public static void orderPipe(double diameter,double length) {
 		Pipe pipe = new Pipe(diameter,length);
 		Pipe.pipeList.add(pipe);
-		System.out.println("\n~~ Ordered Pipe~~");
+		System.out.println("\n~~ Ordered Pipe ~~");
 	}
 
 	public static void orderOatmilk(double fatpercent,int liter) {
 		Oatmilk oatmilk = new Oatmilk(fatpercent,liter);
 		Oatmilk.oatmilkList.add(oatmilk);
-		System.out.println("\n~~ Ordered Candy~~");
+		System.out.println("\n~~ Ordered Candy ~~");
 	}
 
 	public static void printOrders() {
-		
+		System.out.println("\n~~ Show Orders ~~");
+
 		for (Car car1 : Car.carList) {
 			Car.printInfo(car1);
 		}

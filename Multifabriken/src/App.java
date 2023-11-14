@@ -31,6 +31,7 @@ public class App {
                     Menu.printCarMenu();
                     menuChoice = Menu.checkInt(input);
 
+                    //TODO - SWITCH METOD - GÄRNA EN GEMENSAM
                         switch (menuChoice) {    
                             case 1: carBrand = "Volvo 142"; break;
                             case 2: carBrand = "Saab 9000"; break;
@@ -75,7 +76,8 @@ public class App {
                             default : System.out.println("\nWrong input, Try again!"); continue;
                         }
                         System.out.println("Enter the quantity you would like to order:");
-                        if (input.hasNextInt()) {
+
+                        if (input.hasNextInt()) { //TODO eventuell metod
                             candyQuantity = input.nextInt();
 
                             Orders.orderCandy(candyTaste, candyQuantity);
@@ -87,8 +89,10 @@ public class App {
                     System.out.println("Enter the diameter of pipe you want to order:");
                     pipeDiameter = Menu.checkDouble(input);
                 
+                    
                         System.out.println("Length of pipe you want to order: ");
-                        if (input.hasNextDouble()) {
+
+                        if (input.hasNextDouble()) { //TODO eventuell metod
                             pipeLength = input.nextDouble();  
 
                             Orders.orderPipe(pipeDiameter, pipeLength);
@@ -111,7 +115,7 @@ public class App {
                     }
                         System.out.println("How many liters do you want to order?:");
 
-                        if (input.hasNextInt()) {
+                        if (input.hasNextInt()) { //TODO eventuell metod
                             oatmilkLiters = input.nextInt();
 
                             Orders.orderOatmilk(oatmilkFatPercent, oatmilkLiters);
@@ -120,8 +124,6 @@ public class App {
                         }   
                 break;
                 case 5:
-                    System.out.println("Show Orders");
-                    
                     Orders.printOrders();
                 break;
                 case 6:
