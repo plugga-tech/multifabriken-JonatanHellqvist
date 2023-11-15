@@ -35,7 +35,10 @@ public class App {
            
             switch(menuChoice) {
                     
+                //*****CARS*****/
                 case 1:
+
+                    //*Select Car */
                     Menu.printMenu(Menu.carMenuList);
                     menuChoice = Menu.checkInt(input);
 
@@ -43,6 +46,8 @@ public class App {
                             if (carBrand.equals("backOrError")) {
                                 continue;
                             }
+
+                    //*Select Car Color */
                     Menu.printMenu(Menu.carColorMenuList);
                     menuChoice = Menu.checkInt(input);
                               
@@ -52,6 +57,7 @@ public class App {
                             }
                             input.nextLine();
 
+                    //*Enter Registration */
                     System.out.println("Please enter registration number:\n3 Capital letters followed by 3 numbers 0-9. Example | ABC123 |");
                         while (true) {
                             carRegnumber = input.nextLine();
@@ -65,7 +71,10 @@ public class App {
                         }
                 break;
 
+                //*****CANDY*****/
                 case 2:
+
+                    //*Select Candy Taste*/
                     Menu.printMenu(Menu.candyMenuList);
                     menuChoice = Menu.checkInt(input);
                       
@@ -74,6 +83,7 @@ public class App {
                                 continue;
                             }
 
+                    //*Enter Candy Quantity */
                     System.out.println("Enter the quantity you would like to order:");
                     while (true) {
                         
@@ -93,8 +103,11 @@ public class App {
                         }  
                     }     
                 break;
-
+                
+                //*****PIPE*****/
                 case 3:
+
+                    //*Enter Pipe Diameter */
                     System.out.println("Enter the diameter of the pipe you want (10-100mm):");
                     while(true) {
                         pipeDiameter = Menu.checkDouble(input); // kanske onödig men sparar någon rad kod
@@ -107,7 +120,8 @@ public class App {
                             }
                             input.nextLine(); //ligger en input.next i metoden checkdouble vid minusvärde
                     }
-                        
+
+                    //*Enter Pipe Length */    
                     System.out.println("Length of pipe 10-6100(mm):");
                     while(true) {
                         if (input.hasNextDouble()){ //TODO eventuell metod // kan inte använda checkdouble för objectet skapas här
@@ -124,9 +138,12 @@ public class App {
                             input.next(); //rensa -- måste vara NEXT  
                         }  
                     }     
-                    break;
+                break;
+
+                //*****OATMILK*****/
                 case 4:
 
+                    //*Select Oatmilk Fatpercent */
                     Menu.printMenu(Menu.oatmilkMenuList);
                     menuChoice = Menu.checkInt(input);
                     
@@ -135,6 +152,7 @@ public class App {
                                 continue;
                             }
 
+                    //*Enter Oatmilk Liters */
                     System.out.println("Enter how many liters do you want to order?:");
                         while (true) {
                             if (input.hasNextInt()) { //TODO eventuell metod // kan inte använda checkdouble för objectet skapas här

@@ -26,7 +26,7 @@ public class Menu {
 	}
 	
 //***Check Metoder****/
-
+//för menyval
 	public static int checkInt(Scanner input) {	
 		int intToCheck;
 		if(input.hasNextInt()) {
