@@ -1,4 +1,15 @@
 import java.util.Scanner;
+
+//För att skapa en ny produkt:
+//
+// * Skapa en ny class med önskade variabler, Måste innehålla en arraylist och en "String produkt" med produktnamnet.
+// * Vill du använda dig av menyval så Skapa önskad meny som en sträng längst upp i Menu.java
+// * Lägg till variabler för önskade inputs i main filen "App.java" - 
+// (String för menyval med cases(Måste för tillfället vara 6 val)) - Skapa ny metod med if satser och loopa igenom listan om färre eller fler val behövs.
+// * Print switch metoden - returnerar "backOrError" för menyvalet back eller error från switch metoderna för att fortsätta loopen med continue.
+// * Lägg sedan till ett nytt case i main switchen med önskade metoder från Menu.java
+// * Skapa ny metod för OrderProdukt i Orders.java och lägg till en forloop för produktens array i printOrders metoden
+
 public class App {
     public static void main(String[] args) throws Exception {
         
@@ -23,19 +34,15 @@ public class App {
     String [] oatmilkFatPercents = {"1.5%", "2.5%","3.5%","5%", "10%","15%"};
     int oatmilkLiters = 0;
 
-    
-    
-    
-    
+    System.out.println("\n< Welcome to the Multifactory >");
 
-    System.out.println("\nWelcome to the Multifactory");
         while(run) {
             Menu.printMenu(Menu.indexMenuList);
             menuChoice = Menu.checkInt(input);
            
             switch(menuChoice) {
                     
-                //*****CARS*****/
+                //*CARS*/
                 case 1:
 
                     //*Select Car */
@@ -57,21 +64,21 @@ public class App {
                             }
                             input.nextLine();
 
-                    //*Enter Registration */
-                    System.out.println("Please enter registration number:\n3 Capital letters followed by 3 numbers 0-9. Example | ABC123 |");
+                    //*Enter Registration Number*/
+                    System.out.println("< Please enter registration number >\n< 3 Capital letters followed by 3 numbers 0-9. Example: | ABC123 | >");
                         while (true) {
                             carRegnumber = input.nextLine();
-                            if (carRegnumber.length() == 6 && carRegnumber.matches("[A-Z]{3}\\d{3}")) { // A-Z {3} gånger sen \\d(siffra 0-9) {3} gånger"
+                            if (carRegnumber.length() == 6 && carRegnumber.matches("[A-Z]{3}\\d{3}")) { //(A-Z {3} gånger sen \\d(siffra 0-9) {3} gånger)"
                                 Orders.orderCar(carRegnumber, carColor, carBrand);//order car om allt stämmer
                         break;
 
                             } else {
-                                System.out.println("* Error * Please check the format for registration number |-> ABC123 <-|");
+                                System.out.println("< Error > < Please check the format for registration number |-> ABC123 <-| >");
                             }
                         }
                 break;
 
-                //*****CANDY*****/
+                //*CANDY*/
                 case 2:
 
                     //*Select Candy Taste*/
@@ -83,8 +90,8 @@ public class App {
                                 continue;
                             }
 
-                    //*Enter Candy Quantity */
-                    System.out.println("Enter the quantity you would like to order:");
+                    //*Enter Candy Quantity*/
+                    System.out.println("< Enter the quantity you would like to order >");
                     while (true) {
                         
                     
@@ -94,35 +101,35 @@ public class App {
                             Orders.orderCandy(candyTaste, candyQuantity); //Order candy om allt är korrekt
                             break;
                             } else {
-                                System.out.println("* Error - negative input * \nEnter a positive quantity:");
+                                System.out.println("< Error - negative input > \n< Enter a positive quantity >");
                                 input.nextLine();
                             }
                         }else {
-                            System.out.println("* Error - Wrong Input *\nPlease Enter the quantity you would like to order:");
+                            System.out.println("< Error - Wrong Input >\n< Please Enter the quantity you would like to order >");
                             input.next();
                         }  
                     }     
                 break;
                 
-                //*****PIPE*****/
+                //*PIPE*/
                 case 3:
 
                     //*Enter Pipe Diameter */
-                    System.out.println("Enter the diameter of the pipe you want (10-100mm):");
+                    System.out.println("< Enter the diameter of the pipe you want (10-100mm) >");
                     while(true) {
                         pipeDiameter = Menu.checkDouble(input); // kanske onödig men sparar någon rad kod
                             if (pipeDiameter >= 10 && pipeDiameter <= 100) {
                                 break;
                             } else if (pipeDiameter < 0) {
-                                System.out.println("* Error - Wrong input * \nPlease select a diameter in the interval of 10-100 (mm)");
+                                System.out.println("< Error - Wrong input > \n< Please select a diameter in the interval of 10-100 (mm) >");
                             } else {
-                                System.out.println("* Incorrect dimensions * \nPlease select a diameter in the interval of 10-100 (mm)");
+                                System.out.println("< Incorrect dimensions > \n< Please select a diameter in the interval of 10-100 (mm) >");
                             }
-                            input.nextLine(); //ligger en input.next i metoden checkdouble vid minusvärde
+                            input.nextLine(); //ligger en input.next i metoden checkdouble vid minusvärde.
                     }
 
                     //*Enter Pipe Length */    
-                    System.out.println("Length of pipe 10-6100(mm):");
+                    System.out.println("< Length of pipe 10-6100(mm) >");
                     while(true) {
                         if (input.hasNextDouble()){ //TODO eventuell metod // kan inte använda checkdouble för objectet skapas här
                             pipeLength = input.nextDouble();  
@@ -130,17 +137,17 @@ public class App {
                                     Orders.orderPipe(pipeDiameter, pipeLength); //Order pipe om allt är korrekt
                                     break;
                                 } else {
-                                    System.out.println("* Incorrect dimensions *\nPlease select a length in the interval of 10-6100 (mm)");
+                                    System.out.println("< Incorrect dimensions >\n< Please select a length in the interval of 10-6100 (mm) >");
                                     input.nextLine(); //rensa -- måste var NEXTLINE    
                                 }
                         } else { 
-                            System.out.println("* Error - Wrong Input *\nPlease Enter a length in the interval of 10-6100 (mm)");
+                            System.out.println("< Error - Wrong Input >\n< Please Enter a length in the interval of 10-6100 (mm) >");
                             input.next(); //rensa -- måste vara NEXT  
                         }  
                     }     
                 break;
 
-                //*****OATMILK*****/
+                //*OATMILK*/
                 case 4:
 
                     //*Select Oatmilk Fatpercent */
@@ -153,7 +160,7 @@ public class App {
                             }
 
                     //*Enter Oatmilk Liters */
-                    System.out.println("Enter how many liters do you want to order?:");
+                    System.out.println("< Enter how many liters do you want to order? >");
                         while (true) {
                             if (input.hasNextInt()) { //TODO eventuell metod // kan inte använda checkdouble för objectet skapas här
                                 oatmilkLiters = input.nextInt();
@@ -161,11 +168,11 @@ public class App {
                                     Orders.orderOatmilk(oatmilkFatPercent, oatmilkLiters); //Order milk om allt är korrekt
                                 break;
                                 }else {
-                                    System.out.println("* Error - Negative input * \nEnter a positive ammount for liters: ");
+                                    System.out.println("< Error - Negative input >\n< Enter a positive ammount for liters >");
                                     input.nextLine();
                                 }   
                             } else {
-                                System.out.println("* Error - Wrong input * \nPlease Enter how many liters you would like to order:");
+                                System.out.println("< Error - Wrong input >\n< Please Enter how many liters you would like to order >");
                                 input.next();
                             }
                         }
@@ -174,11 +181,11 @@ public class App {
                     Orders.printOrders();
                 break;
                 case 6:
-                    System.out.println("Exiting the Multifactory");
+                    System.out.println("< Exiting the Multifactory >");
                     run = false;
                 break;
                 default:
-                    System.out.println("\n* Error - Wrong input\n* Try again!\n");
+                    System.out.println("\n< Error - Wrong input >\n< Try again! >\n");
                 break;
             }
         }
