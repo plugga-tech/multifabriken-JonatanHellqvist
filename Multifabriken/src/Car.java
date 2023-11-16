@@ -5,20 +5,16 @@ public class Car {
 	
 	public static List<Car> carList = new ArrayList<>();
 
-	//Variabler Regnumber,Color,Brand
 	private String produkt = "Car";
-	private String regNumber; //lås till 6 siffror?
+	private String regNumber; 
 	private String color;
 	private String brand;
 
-	//Constructor
 	Car(String regNumber,String color,String brand){
 		this.regNumber = regNumber;
 		this.color = color;
 		this.brand = brand;
 	}
-
-	//getters och setters
 
 	public String getProdukt() {
 		return produkt;
@@ -52,7 +48,6 @@ public class Car {
 		this.brand = brand;
 	}
 
-	//printmetod Car.printInfo(car)
 	public static void printInfo(Car car){
 		System.out.println(
 			"\nProdukt: " + car.getProdukt() + 

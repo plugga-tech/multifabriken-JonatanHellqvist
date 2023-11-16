@@ -4,18 +4,16 @@ import java.util.List;
 public class Candy {
 
 	public static List<Candy> candyList = new ArrayList<>();
-	//Variabler Taste,Number
+	
 	private String produkt = "Candy";
-	private String taste;//eventuellt låsa till några val?
+	private String taste;
 	private int quantity;
 
-	//Constructor
 	Candy(String taste,int quantity) {
 		this.taste = taste;
 		this.quantity = quantity;
 	}
 
-	//getters och setters
 	public String getTaste() {
 		return taste;
 	}
@@ -37,7 +35,6 @@ public class Candy {
 		this.quantity = quantity;
 	}
 
-	//printmetod Candy.printInfo(candy)
 	public static void printInfo(Candy candy){
 		System.out.println(
 			"\nProdukt: " + candy.getProdukt() + 

@@ -25,7 +25,7 @@ public class Menu {
 		}
 	}
 	//******SWITCH*******
-	
+
 	public static String [] carBrands = {"Volvo 142", "Saab 9000", "Fiat Uno", "Passat" , "Monstertruck", "Stridsvagn M40"};
 	public static String [] carColors = {"White", "Black", "Red", "Yellow" , "Blue", "Rust"};
 	public static String [] candyTastes = {"Sour","Sweet","Salty","Chocolate","Mint","Fruity"};
@@ -40,7 +40,7 @@ public class Menu {
 			case 4: selectedCase = caseOptions[3]; break;
 			case 5: selectedCase = caseOptions[4]; break;
 			case 6: selectedCase = caseOptions[5]; break;
-			case 7: System.out.println("\nBack"); return "backOrError"; //"if sats med continue om selectedCase = backOrError"
+			case 7: System.out.println("\nBack"); return "backOrError"; //"hantera med if sats med continue om selectedCase = backOrError"
 			default: System.out.println("\n< Wrong input, Try again! >"); return "backOrError";		
 		}
 		return selectedCase;

@@ -2,13 +2,16 @@ import java.util.Scanner;
 
 //För att skapa en ny produkt:
 //
-// * Skapa en ny class med önskade variabler, Måste innehålla en arraylist och en "String produkt" med produktnamnet.
-// * Vill du använda dig av menyval så Skapa önskad meny som en sträng längst upp i Menu.java
+// * Skapa en ny klass med önskade variabler, Måste innehålla en arraylist och en "String produkt" med produktnamnet, -
+// en "printInfo",en "orderProdukt" metod i "Orders.java" och en forloop för produktens array i "printOrders" metoden.
+// 
 // * Lägg till variabler för önskade inputs i main filen "App.java" - 
-// (String för menyval med cases(Måste för tillfället vara 6 val)) - Skapa ny metod med if satser och loopa igenom listan om färre eller fler val behövs.
+// (String för menyval med cases(Måste för tillfället vara 6 val, placeras i "Menu.java").
+//
+// * Vill du använda dig av menyval så skapa önskad meny som en sträng längst upp i "Menu.java"
+//
 // * Print switch metoden - returnerar "backOrError" för menyvalet back eller error från switch metoderna för att börja om loopen med continue.
 // * Lägg sedan till ett nytt case i main switchen med önskade metoder från Menu.java
-// * Skapa ny metod för OrderProdukt i Orders.java och lägg till en forloop för produktens array i printOrders metoden
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -95,7 +98,7 @@ public class App {
                     while (true) {
                         
                     
-                        if (input.hasNextInt()) { //TODO eventuell metod // kan inte använda checkdouble för objectet skapas här
+                        if (input.hasNextInt()) { 
                             candyQuantity = input.nextInt();
                             if (candyQuantity > 0) {
                             Orders.orderCandy(candyTaste, candyQuantity); //Order candy om allt är korrekt
@@ -117,7 +120,7 @@ public class App {
                     //*Enter Pipe Diameter */
                     System.out.println("< Enter the diameter of the pipe you want (10-100mm) >");
                     while(true) {
-                        pipeDiameter = Menu.checkDouble(input); // kanske onödig men sparar någon rad kod
+                        pipeDiameter = Menu.checkDouble(input); 
                             if (pipeDiameter >= 10 && pipeDiameter <= 100) {
                                 break;
                             } else if (pipeDiameter < 0) {
@@ -131,18 +134,18 @@ public class App {
                     //*Enter Pipe Length */    
                     System.out.println("< Length of pipe 10-6100(mm) >");
                     while(true) {
-                        if (input.hasNextDouble()){ //TODO eventuell metod // kan inte använda checkdouble för objectet skapas här
+                        if (input.hasNextDouble()){ 
                             pipeLength = input.nextDouble();  
                                 if (pipeLength >= 10 && pipeLength <= 6100) {
                                     Orders.orderPipe(pipeDiameter, pipeLength); //Order pipe om allt är korrekt
                                     break;
                                 } else {
                                     System.out.println("< Incorrect dimensions >\n< Please select a length in the interval of 10-6100 (mm) >");
-                                    input.nextLine(); //rensa -- måste var NEXTLINE    
+                                    input.nextLine();    
                                 }
                         } else { 
                             System.out.println("< Error - Wrong Input >\n< Please Enter a length in the interval of 10-6100 (mm) >");
-                            input.next(); //rensa -- måste vara NEXT  
+                            input.next();  
                         }  
                     }     
                 break;
@@ -162,7 +165,7 @@ public class App {
                     //*Enter Oatmilk Liters */
                     System.out.println("< Enter how many liters do you want to order? >");
                         while (true) {
-                            if (input.hasNextInt()) { //TODO eventuell metod // kan inte använda checkdouble för objectet skapas här
+                            if (input.hasNextInt()) { 
                                 oatmilkLiters = input.nextInt();
                                 if (oatmilkLiters > 0) {
                                     Orders.orderOatmilk(oatmilkFatPercent, oatmilkLiters); //Order milk om allt är korrekt

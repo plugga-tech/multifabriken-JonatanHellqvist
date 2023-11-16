@@ -5,17 +5,15 @@ public class Oatmilk {
 
 	public static List<Oatmilk> oatmilkList = new ArrayList<>();
 
-	//Variabler Fatpercent,Liter
 	private String produkt = "Oatmilk";
-	private String fatpercent;//eventuellt låsa till några val?
+	private String fatpercent;
 	private int liter;
 
-	//Constructor
 	Oatmilk(String fatpercent, int liter) {
 		this.fatpercent = fatpercent;
 		this.liter = liter;
 	}
-	//getters och setters
+	
 	public String getFatpercent() {
 		return fatpercent;
 	}
@@ -40,7 +38,6 @@ public class Oatmilk {
 		this.liter = liter;
 	}
 
-	//printmetod Oatmilk.printInfo(oatmilk)
 	public static void printInfo(Oatmilk oatmilk){
 		System.out.println(
 			"\nProdukt: " + oatmilk.getProdukt() + 

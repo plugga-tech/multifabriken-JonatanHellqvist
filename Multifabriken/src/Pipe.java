@@ -4,18 +4,16 @@ import java.util.List;
 public class Pipe {
 
 	public static List<Pipe> pipeList = new ArrayList<>();
-	//Variabler Diameter,Length
+	
 	private String produkt = "Pipe";
-	private double diameter;//eventuellt låsa till några val
+	private double diameter;
 	private double length;
 
-	//Konstruktor
 	Pipe(double diameter,double length){
 		this.diameter = diameter;
 		this.length = length;
 	}
 
-	//getters och setters
 	public String getProdukt() {
 		return produkt;
 	}
@@ -35,7 +33,6 @@ public class Pipe {
 		this.length = length;
 	}
 
-	//printmetod Pipe.printInfo(pipe)
 	public static void printInfo(Pipe pipe){
 		System.out.println(
 			"\nProdukt: " + pipe.getProdukt() + 
