@@ -6,7 +6,7 @@ import java.util.Scanner;
 // * Vill du använda dig av menyval så Skapa önskad meny som en sträng längst upp i Menu.java
 // * Lägg till variabler för önskade inputs i main filen "App.java" - 
 // (String för menyval med cases(Måste för tillfället vara 6 val)) - Skapa ny metod med if satser och loopa igenom listan om färre eller fler val behövs.
-// * Print switch metoden - returnerar "backOrError" för menyvalet back eller error från switch metoderna för att fortsätta loopen med continue.
+// * Print switch metoden - returnerar "backOrError" för menyvalet back eller error från switch metoderna för att börja om loopen med continue.
 // * Lägg sedan till ett nytt case i main switchen med önskade metoder från Menu.java
 // * Skapa ny metod för OrderProdukt i Orders.java och lägg till en forloop för produktens array i printOrders metoden
 
@@ -18,20 +18,20 @@ public class App {
 	int menuChoice = 0;
     
     String carBrand = "";
-    String [] carBrands = {"Volvo 142", "Saab 9000", "Fiat Uno", "Passat" , "Monstertruck", "Stridsvagn M40"};
+    String [] carBrands = Menu.carBrands;
     String carColor = "";
-    String [] carColors = {"White", "Black", "Red", "Yellow" , "Blue", "Rust"};
+    String [] carColors = Menu.carColors; 
     String carRegnumber = "";
 
     String candyTaste = "";
-    String [] candyTastes = {"Sour","Sweet","Salty","Chocolate","Mint","Fruity"};
+    String [] candyTastes = Menu.candyTastes; 
     int candyQuantity = 0;
 
     double pipeDiameter = 0;
     double pipeLength = 0;
 
     String oatmilkFatPercent = "";
-    String [] oatmilkFatPercents = {"1.5%", "2.5%","3.5%","5%", "10%","15%"};
+    String [] oatmilkFatPercents = Menu.oatmilkFatPercents; 
     int oatmilkLiters = 0;
 
     System.out.println("\n< Welcome to the Multifactory >");
@@ -49,7 +49,7 @@ public class App {
                     Menu.printMenu(Menu.carMenuList);
                     menuChoice = Menu.checkInt(input);
 
-                        carBrand =  Menu.printSwitch(menuChoice, carBrands); 
+                        carBrand =  Menu.printSwitch(menuChoice,carBrands); 
                             if (carBrand.equals("backOrError")) {
                                 continue;
                             }

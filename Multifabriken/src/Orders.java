@@ -21,7 +21,7 @@ public class Orders {
 	public static void orderOatmilk(String fatpercent,int liter) {
 		Oatmilk oatmilk = new Oatmilk(fatpercent,liter);
 		Oatmilk.oatmilkList.add(oatmilk);
-		System.out.println("\n~~ Ordered Candy ~~");
+		System.out.println("\n~~ Ordered Oatmilk ~~");
 	}
 
 	public static void printOrders() {
